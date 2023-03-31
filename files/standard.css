@@ -1,4 +1,5 @@
 .column {
-width: 49%;
+width: 59%;
 background-color: red;
+float: left;
 }
