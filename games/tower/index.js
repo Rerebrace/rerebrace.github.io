@@ -18,7 +18,7 @@ async function updateDownloads(whichdoc) {
             if (data[i]['id'] === idone) {
                 console.log(data[i])
                 let newhere = data[i][rowname] +1
-                const { error1 } = await _supabase.from(tablename).update({ dwldnum: newhere }).eq('id', idone)
+                const { error1 } = await _supabase.from(tablename).update({ downloads: newhere }).eq('id', idone)
                 thisvar.innerHTML = `Version 1.1 - ${newhere} Downloads`;
             }
         }
@@ -28,7 +28,7 @@ async function updateDownloads(whichdoc) {
             if (data[i]['id'] === idtwo) {
                 console.log(data[i])
                 let newhere = data[i][rowname] +1
-                const { error1 } = await _supabase.from(tablename).update({ dwldnum: newhere }).eq('id', idtwo)
+                const { error1 } = await _supabase.from(tablename).update({ downloads: newhere }).eq('id', idtwo)
                 thisvar.innerHTML = `Version 1.2 - ${newhere} Downloads`;
             }
         }
@@ -39,7 +39,7 @@ async function updateDownloads(whichdoc) {
             if (data[i]['id'] === idthree) {
                 console.log(data[i])
                 let newhere = data[i][rowname] +1
-                const { error1 } = await _supabase.from(tablename).update({ dwldnum: newhere }).eq('id', idthree)
+                const { error1 } = await _supabase.from(tablename).update({ downloads: newhere }).eq('id', idthree)
                 thisvar.innerHTML = `Version 1.3 - ${newhere} Downloads`;
             }
         }
