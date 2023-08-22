@@ -2,11 +2,11 @@ let oneone = document.getElementById("11downloads");
 let onetwo = document.getElementById("12downloads");
 let onethree = document.getElementById("13downloads");
 let twozero = document.getElementById('20downloads');
-let tablename = "Alexthing";
-let idone = "11downloads"
-let idtwo = "12downloads"
-let idthree = "13downloads"
-let rowname = "dwldnum"
+let tablename = "Download Numbers";
+let idone = "download1.1"
+let idtwo = "download1.2"
+let idthree = "download1.3"
+let rowname = "downloads"
 
 async function updateDownloads(whichdoc) {
 
