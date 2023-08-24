@@ -23,30 +23,11 @@ async function updateDownloads(whichdoc) {
             }
         }
     }
-    if (whichdoc == "12downloads") {
-        for (let i = 0; i < 3; i++) {
-            if (data[i]['id'] === idtwo) {
-                console.log(data[i])
-                let newhere = data[i][rowname] +1
-                const { error1 } = await _supabase.from(tablename).update({ downloads: newhere }).eq('id', idtwo)
-                thisvar.innerHTML = `Version 1.2 - ${newhere} Downloads`;
-            }
-        }
-    }
-    // Made by Hyqerion199 (github.com/hyqerion199)
-    if (whichdoc == "13downloads") {
-        for (let i = 0; i < 3; i++) {
-            if (data[i]['id'] === idthree) {
-                console.log(data[i])
-                let newhere = data[i][rowname] +1
-                const { error1 } = await _supabase.from(tablename).update({ downloads: newhere }).eq('id', idthree)
-                thisvar.innerHTML = `Version 1.3 - ${newhere} Downloads`;
-            }
-        }
-    }
-    if (whichdoc == "20downloads") {
-        thisvar.innerHTML = 'Version 2.0';// - 0 Downloads';
-    }
+}
+
+function myFunction() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("preview").innerHTML = x;
 }
 
 async function firstload() {
