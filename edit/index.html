@@ -4,7 +4,7 @@
   
 <head>
 
-  <title>The Tower</title>
+  <title>Edit</title>
   <link rel="stylesheet" type="text/css" href="../standard.css">
 
 </head>
@@ -13,27 +13,39 @@
 
 <body>
 
-  <div class="column1">
+<div class="column1">
+  <div class="grouping">
+    <p class="plaintext">You are here to edit articles.</p>
+  </div>
+
+  <div class="grouping">
     <div class="grouping">
-      <p class="plaintext">You are here to edit articles.</p>
+      <p class="plaintext">Title</p>
+      <input type="text" id="titleText" value="Placeholder">
+      <button onclick="previewText('titlePreview')">Preview</button>
     </div>
     <div class="grouping">
-      <p class="plaintext"> Enter Text: </p>
-      <div class="grouping">
-        <input type="text" id="TextBox" value="Placeholder">
-        <button onclick="myFunction()">Try it</button>
-      </div>
-      <div class="grouping">
-        <input type="text" id="TextBox2" value="Placeholder">
-        <button onclick="myFunction()">Try it</button>
-      </div>
-
-
-      
-      <p id="preview" class="plaintext"> Preview </p>
-
+      <p class="plaintext">Text</p>
+      <textarea id="articleText" rows="4" cols="50" style="resize: none;"></textarea>
+      <button onclick="previewText('articlePreview')">Preview</button>
+    </div>
+    <div class="grouping">
+      <p class="plaintext">Enter</p>
+      <input type="text" id="titleText" value="Password">
+      <button onclick="enterText">Enter</button>
     </div>
   </div>
+</div>
+
+<div class="divider">Divider</div>
+
+<div class="column2">
+  <div class="grouping">
+    <h2 id="titlePreview" class="plaintext"> Preview </h2>
+    <p id="articlePreview" class="plaintext"> Preview </p>
+  </div>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
