@@ -22,9 +22,6 @@ async function enterText() {
     if(password.value == "4321") {
         let time = ((new Date()).toISOString()).toLocaleString('zh-TW');
         const { count, error } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
-        if(count > 5) {
-        count = 5;
-        }
         const { error1 } = await _supabase.from(tableName).insert({ id: count+1, title: titleText.value, contents: articleText.value, date:time});
     }
 }
