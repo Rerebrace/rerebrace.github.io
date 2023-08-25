@@ -47,6 +47,8 @@
     </div>
   </div>
 
+  <!-- articles directly from supabase-->
+  
   <div class="column2">
     <div class="grouping">
       <h3 class="plaintext">Article #1: 4/1</h3>
@@ -65,6 +67,13 @@
     <p>Divider</p>
   </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = 'https://nvphfgdzlfewpzgvdyex.supabase.co'
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGhmZ2R6bGZld3B6Z3ZkeWV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2NTk3NzksImV4cCI6MjAwODIzNTc3OX0.zf-2chGWKia_suIcDbvSZm5IAk_sGUUE8fKSHl9vZ4I'
+  const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+</script>
+<script src="./index.js"></script>
 
 </body>
 
