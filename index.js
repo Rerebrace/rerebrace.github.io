@@ -1,5 +1,5 @@
 let articleHolder = document.getElementById("articleHolder");
-let tableName = "Download Numbers";
+let tableName = "News Articles";
 let contents = "";
 
 
