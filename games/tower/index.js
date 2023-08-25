@@ -1,3 +1,5 @@
+// Made by Hyqerion199 (github.com/hyqerion199)
+
 let oneone = document.getElementById("11downloads");
 let onetwo = document.getElementById("12downloads");
 let onethree = document.getElementById("13downloads");
