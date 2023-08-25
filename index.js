@@ -13,12 +13,12 @@ async function retrieveArticles() {
     for(let i = 0; i < 2; i++) {
         for(let j = 0; j < currentNumber; j++) {
             if(data[j]["id"] == currentNumber) {
-                contents += <div class="column2"><div class="grouping"><h3 class="plaintext">${data[j]["title"]}: ${data[j]["date"]}</h3><p class = "plaintext">${data[j]["contents"]}</p></div></div>;
+                contents += "<div class="column2"><div class="grouping"><h3 class="plaintext">${data[j]["title"]}: ${data[j]["date"]}</h3><p class = "plaintext">${data[j]["contents"]}</p></div></div>";
                 currentNumber--;  
             }
         }
     }
-    articleHolder.insertAdjacentHTML("afterbegin", contents)
+    articleHolder.innerHTML = contents;
 
 }
 
