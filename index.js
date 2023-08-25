@@ -10,8 +10,8 @@ async function retrieveArticles() {
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = count;
     
-    for(let i = 0; i < 10; i++) {
-        for(let j = 0; j < 3; j++) {
+    for(let i = 0; i < 2; i++) {
+        for(let j = 0; j < currentNumber; j++) {
             if(data[j]["id"] == currentNumber) {
                 contents += <div class="column2"><div class="grouping"><h3 class="plaintext">${data[j]["title"]}: ${data[j]["date"]}</h3><p class = "plaintext">${data[j]["contents"]}</p></div></div>;
                 currentNumber--;  
