@@ -18,7 +18,8 @@ async function retrieveArticles() {
             }
         }
     }
-    articleHolder.innerHTML = contents;
+    articleHolder.insertAdjacentHTML("afterbegin", contents)
+
 }
 
 retrieveArticles();
