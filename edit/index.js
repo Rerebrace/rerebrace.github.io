@@ -20,7 +20,8 @@ function previewText(inputType) {
 }
 
 async function enterText() {
-    
+    console.log(yourEmail);
+    console.log(yourPassword);
     const { data, error } = await _supabase.auth.signInWithPassword({email: yourEmail, password: yourPassword,});
     let time = ((new Date()).toISOString()).toLocaleString('zh-TW');
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
