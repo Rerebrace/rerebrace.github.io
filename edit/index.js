@@ -20,9 +20,9 @@ function previewText(inputType) {
 }
 
 async function enterText() {
-    console.log(yourEmail);
-    console.log(yourPassword);
-    const { data, error } = await _supabase.auth.signInWithPassword({email: yourEmail, password: yourPassword,});
+    console.log(yourEmail.value);
+    console.log(yourPassword.value);
+    const { data, error } = await _supabase.auth.signInWithPassword({email: yourEmail.value, password: yourPassword.value,});
     let time = ((new Date()).toISOString()).toLocaleString('zh-TW');
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     const { error2 } = await _supabase.from(tableName).insert({ id: count+1, title: titleText.value, contents: articleText.value, date:time});
