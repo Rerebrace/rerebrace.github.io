@@ -23,7 +23,7 @@ async function retrieveFeedbackLogs() {
     
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
-    let currentNumber = 0;
+    let currentNumber = 1;
     
     feedbackLogsHolder.innerHTML = "";
     console.log(data);
