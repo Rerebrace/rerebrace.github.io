@@ -29,9 +29,9 @@ async function retrieveFeedbackLogs() {
     console.log(data);
     for(let i = 0; i < count; i++) {
         for(let j = 0; j < count; j++) {
-            if(data[j]["id"] == currentNumber) {
-                nameVar = data[j]["name"];
-                textVar = data[j]["contents"];
+            if(data[count - j]["id"] == currentNumber) {
+                nameVar = data[count - j]["name"];
+                textVar = data[count - j]["contents"];
 
                 feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement"></td><td class="secondelement tableelement"></td></tr>');
                 let namePlace = document.getElementsByClassName("firstelement");
