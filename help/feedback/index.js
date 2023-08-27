@@ -22,7 +22,7 @@ async function retrieveFeedbackLogs() {
     let currentNumber = count;
 
     console.log(data);
-    for(let i = 0; i < repeatCount; i++) {
+    for(let i = 0; i < count; i++) {
         for(let j = 0; j < count; j++) {
             if(data[j]["id"] == currentNumber) {
                 nameVar = data[j]["name"];
