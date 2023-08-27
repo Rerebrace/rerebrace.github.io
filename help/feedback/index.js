@@ -30,7 +30,7 @@ async function retrieveFeedbackLogs() {
             if(data[j]["id"] == currentNumber) {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
-                contents += '<tr><td class="tableelement">' nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';
+                contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';
                 console.log(contents);
                 currentNumber-=1;
                 feedbackLogsHolder.innerHTML = contents;
