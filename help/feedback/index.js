@@ -25,9 +25,7 @@ async function retrieveFeedbackLogs() {
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = count;
     
-    contents = "";
-    contents += '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>';
-
+    feedbackLogsHolder.innerHTML = "";
     console.log(data);
     for(let i = 0; i < count; i++) {
         for(let j = 0; j < count; j++) {
@@ -35,7 +33,7 @@ async function retrieveFeedbackLogs() {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
 
-                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement" class="tableelement"></td><td class="secondelement" class="tableelement"></td></tr>')
+                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement" class="tableelement"></td><td class="secondelement" class="tableelement"></td></tr>');
                 let namePlace = document.getElementsByClassName("firstelement");
                 namePlace[namePlace.length-1].insertAdjacentText("beforeend", nameVar);
                 let textPlace = document.getElementsByClassName("secondelement");
@@ -45,7 +43,8 @@ async function retrieveFeedbackLogs() {
                 break;
             }
         }
-    }    
+    }
+    feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>');
 }
 
 retrieveFeedbackLogs();
