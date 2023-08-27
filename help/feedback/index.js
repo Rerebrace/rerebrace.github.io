@@ -24,6 +24,7 @@ async function retrieveFeedbackLogs() {
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = count;
+    let idNumber = 0;
     
     contents = "";
     contents += '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>';
@@ -35,19 +36,25 @@ async function retrieveFeedbackLogs() {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
 
-                feedbackLogsHolder.insertAdjacentHTML("beforeend", '<tr><td class="tableelement">');
+                <!--feedbackLogsHolder.insertAdjacentHTML("beforeend", '<tr><td class="tableelement">');
                 feedbackLogsHolder.insertAdjacentText("beforeend", nameVar);
                 feedbackLogsHolder.insertAdjacentHTML("beforeend", '</td><td class="tableelement">');
                 feedbackLogsHolder.insertAdjacentText("beforeend", textVar);
-                feedbackLogsHolder.insertAdjacentHTML("beforeend", </td></tr>);
+                feedbackLogsHolder.insertAdjacentHTML("beforeend", </td></tr>);-->
 
-
+                contents += '<tr><td id="idNumber"class="tableelement"></td><td id="idNumber+1" class="tableelement"></td></tr>';
+                feedbackLogsHolder.innerHTML = contents;
+                let namePlace = document.getElementsById("idNumber");
+                namePlace.insertAdjacentText("beforeend", nameVar);
+                let textPlace = document.getElementsById("idNumber+1");
 
                 
-                <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';
+                textPlace.insertAdjacentText("beforeend", textVar);
+                
+                <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';-->
                 console.log(contents);
                 currentNumber-=1;
-                feedbackLogsHolder.innerHTML = contents;-->
+                idNumber += 2;
                 break;
             }
         }
