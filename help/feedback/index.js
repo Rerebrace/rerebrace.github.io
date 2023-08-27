@@ -24,7 +24,8 @@ async function retrieveFeedbackLogs() {
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = count;
-
+    
+    contents = "";
     contents += '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>';
 
     console.log(data);
@@ -45,4 +46,4 @@ async function retrieveFeedbackLogs() {
 
 retrieveFeedbackLogs();
 
-setInterval(retrieveFeedbackLogs(), 1000);
+const intervalID = setInterval(retrieveFeedbackLogs, 1000);
