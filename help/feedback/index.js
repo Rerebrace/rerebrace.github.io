@@ -4,6 +4,7 @@ let feedbackText = document.getElementById("feedback");
 let tableName = "Feedback";
 let nameVar = "";
 let textVar = "";
+let contents = "";
 
 async function enterText() {
     console.log(feedbackName.value);
