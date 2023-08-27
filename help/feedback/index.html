@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  
+<head>
+
+  <title>Feedback</title>
+  <link rel="stylesheet" type="text/css" href="../standard.css">
+
+</head>
+
+
+
+<body>
+
+  <header class="headerrow">
+    <h1>The Rerebrace Website</h1>
+  </header>
+
+  <ul class="navigationlist">
+    <li class="navigationelement"><a class="navigationlink" href="../">Home</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../games/">Games</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../help/">Help</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../about/">About</a></li>
+  </ul>
+
+  <div class="divider">
+    <p>Divider</p>
+  </div>
+
+  <div class="column1">
+    <div class="grouping">
+      <h2 class="plaintext">Feedback</h2>
+    </div>
+    <div class="grouping">
+      <p class="plaintext">This is the feedback page of this site. Give any feedback here regarding anything to do with this website, including how I should improve my games and other ideas. Please do not spam here or post any unconstructive criticism.</p>
+    </div>
+    <div class="grouping">
+      
+      <table class="tabledesign" style="width:100%">
+        <tr>
+          <th class="tableelement">Name (Please don't use your real name, just stay consistent)</td>
+          <th class="tableelement">Feedback</td>
+        </tr>
+        <tr>
+          <td class="tableelement"><input type="text" id="name" placeholder="Name"></td>
+          <td class="tableelement"><input type="text" id="feedback" placeholder="Feedback"></td>
+          <td class="tableelement"><button onclick="enterText()">Enter</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = 'https://nvphfgdzlfewpzgvdyex.supabase.co'
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGhmZ2R6bGZld3B6Z3ZkeWV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2NTk3NzksImV4cCI6MjAwODIzNTc3OX0.zf-2chGWKia_suIcDbvSZm5IAk_sGUUE8fKSHl9vZ4I'
+  const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+</script>
+<script src="./index.js"></script>
+
+</body>
+
+</html>
