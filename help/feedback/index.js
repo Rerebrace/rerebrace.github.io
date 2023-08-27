@@ -35,22 +35,11 @@ async function retrieveFeedbackLogs() {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
 
-                <!--feedbackLogsHolder.insertAdjacentHTML("beforeend", '<tr><td class="tableelement">');
-                feedbackLogsHolder.insertAdjacentText("beforeend", nameVar);
-                feedbackLogsHolder.insertAdjacentHTML("beforeend", '</td><td class="tableelement">');
-                feedbackLogsHolder.insertAdjacentText("beforeend", textVar);
-                feedbackLogsHolder.insertAdjacentHTML("beforeend", </td></tr>);-->
-
-                <!--contents += '<tr><td class="firstelement" class="tableelement"></td><td class="secondelement" class="tableelement"></td></tr>';
-                feedbackLogsHolder.innerHTML = contents;-->
-
                 feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement" class="tableelement"></td><td class="secondelement" class="tableelement"></td></tr>')
                 let namePlace = document.getElementsByClass("firstelement");
                 namePlace[namePlace.length-1].insertAdjacentText("beforeend", nameVar);
                 let textPlace = document.getElementsByClass("secondelement");
                 textPlace[textPlace.length-1].insertAdjacentText("beforeend", textVar);
-                
-                <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';-->
                 console.log(contents);
                 currentNumber-=1;
                 break;
