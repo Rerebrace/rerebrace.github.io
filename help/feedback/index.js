@@ -24,7 +24,6 @@ async function retrieveFeedbackLogs() {
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = count;
-    let idNumber = 0;
     
     contents = "";
     contents += '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>';
@@ -42,13 +41,13 @@ async function retrieveFeedbackLogs() {
                 feedbackLogsHolder.insertAdjacentText("beforeend", textVar);
                 feedbackLogsHolder.insertAdjacentHTML("beforeend", </td></tr>);-->
 
-                contents += '<tr><td id="idNumber"class="tableelement"></td><td id="idNumber+1" class="tableelement"></td></tr>';
-                feedbackLogsHolder.innerHTML = contents;
-                let namePlace = document.getElementsById("idNumber");
-                namePlace.insertAdjacentText("beforeend", nameVar);
-                let textPlace = document.getElementsById("idNumber+1");
+                <!--contents += '<tr><td id="1" class="tableelement"></td><td id="2" class="tableelement"></td></tr>';
+                feedbackLogsHolder.innerHTML = contents;-->
 
-                
+                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td id="1" class="tableelement"></td><td id="2" class="tableelement"></td></tr>')
+                let namePlace = document.getElementById("1");
+                namePlace.insertAdjacentText("beforeend", nameVar);
+                let textPlace = document.getElementById("2");
                 textPlace.insertAdjacentText("beforeend", textVar);
                 
                 <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';-->
