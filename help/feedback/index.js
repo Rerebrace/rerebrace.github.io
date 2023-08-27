@@ -53,7 +53,6 @@ async function retrieveFeedbackLogs() {
                 <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';-->
                 console.log(contents);
                 currentNumber-=1;
-                idNumber += 2;
                 break;
             }
         }
