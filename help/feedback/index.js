@@ -23,15 +23,15 @@ async function retrieveFeedbackLogs() {
     
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
-    let currentNumber = count;
+    let currentNumber = 0;
     
     feedbackLogsHolder.innerHTML = "";
     console.log(data);
     for(let i = 0; i < count; i++) {
         for(let j = 0; j < count; j++) {
-            if(data[count - j]["id"] == currentNumber) {
-                nameVar = data[count - j]["name"];
-                textVar = data[count - j]["contents"];
+            if(data[j]["id"] == currentNumber) {
+                nameVar = data[j]["name"];
+                textVar = data[j]["contents"];
 
                 feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement"></td><td class="secondelement tableelement"></td></tr>');
                 let namePlace = document.getElementsByClassName("firstelement");
