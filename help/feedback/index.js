@@ -1,3 +1,4 @@
+let feedbackLogsHolder = document.getElementById("feedbackLogs");
 let feedbackName = document.getElementById("name");
 let feedbackText = document.getElementById("feedback");
 let tableName = "Feedback";
@@ -29,7 +30,7 @@ async function retrieveFeedbackLogs() {
                 contents += '<tr><td class="tableelement">${nameVar}</td><td class="tableelement">${textVar}</td></tr>';
                 console.log(contents);
                 currentNumber-=1;
-                articleHolder.innerHTML = contents;
+                feedbackLogsHolder.innerHTML = contents;
                 break;
             }
         }
