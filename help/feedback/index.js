@@ -34,10 +34,20 @@ async function retrieveFeedbackLogs() {
             if(data[j]["id"] == currentNumber) {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
-                contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';
+
+                feedbackLogsHolder.insertAdjacentHTML("beforeend", '<tr><td class="tableelement">');
+                feedbackLogsHolder.insertAdjacentText("beforeend", nameVar);
+                feedbackLogsHolder.insertAdjacentHTML("beforeend", '</td><td class="tableelement">');
+                feedbackLogsHolder.insertAdjacentText("beforeend", textVar);
+                feedbackLogsHolder.insertAdjacentHTML("beforeend", </td></tr>);
+
+
+
+                
+                <!--contents += '<tr><td class="tableelement">' + nameVar + '</td><td class="tableelement">' + textVar + '</td></tr>';
                 console.log(contents);
                 currentNumber-=1;
-                feedbackLogsHolder.innerHTML = contents;
+                feedbackLogsHolder.innerHTML = contents;-->
                 break;
             }
         }
