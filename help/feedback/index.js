@@ -12,6 +12,9 @@ async function enterText() {
 
     const { count, error } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     const { error1 } = await _supabase.from(tableName).insert({ id: count+1, name: feedbackName.value, contents: feedbackText.value});
+
+    feedbackName.value = "";
+    feedbackText.value = "";
 }
 
 
