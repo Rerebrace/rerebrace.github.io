@@ -39,7 +39,7 @@ async function retrieveFeedbackLogs() {
                 let textPlace = document.getElementsByClassName("secondelement");
                 textPlace[textPlace.length-i-1].insertAdjacentText("beforeend", textVar);
                 console.log(contents);
-                currentNumber-=1;
+                currentNumber+=1;
                 break;
             }
         }
