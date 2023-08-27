@@ -41,3 +41,5 @@ async function retrieveFeedbackLogs() {
 }
 
 retrieveFeedbackLogs();
+
+setInterval(retrieveFeedbackLogs(), 1000);
