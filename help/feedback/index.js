@@ -33,7 +33,7 @@ async function retrieveFeedbackLogs() {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
 
-                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement"></td><td class="secondelement tableelement"></td></tr>');
+                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement" width="25%"></td><td class="secondelement tableelement" width="75%"></td></tr>');
                 let namePlace = document.getElementsByClassName("firstelement");
                 namePlace[namePlace.length-i-1].insertAdjacentText("beforeend", nameVar);
                 let textPlace = document.getElementsByClassName("secondelement");
