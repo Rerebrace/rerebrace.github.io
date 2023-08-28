@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
 
+  
+<head>
+
+  <title>Bugs</title>
+  <link rel="stylesheet" type="text/css" href="../../standard.css">
+
+</head>
+
+
+
+<body>
+
+  <header class="headerrow">
+    <h1>The Rerebrace Website</h1>
+  </header>
+
+  <ul class="navigationlist">
+    <li class="navigationelement"><a class="navigationlink" href="../../">Home</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../games/">Games</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../help/">Help</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../about/">About</a></li>
+  </ul>
+
+  <div class="divider">
+    <p>Divider</p>
+  </div>
+
+  <div class="column1">
+    <div class="grouping">
+      <h2 class="plaintext">Bugs</h2>
+    </div>
+    <div class="grouping">
+      <p class="plaintext">This is the bugs pages of this website. Report any bugs that you encounter in my games. Please do not spam here and be specific with what you experience. If the bug is present in multiple versions, please list all versions. Additionally, do not use your real name, just stay consistent with the names that you choose. </p>
+    </div>
+    <div class="grouping">
+      
+      <table class="tabledesign" style="width:99%">
+        <tr>
+          <th class="tableelement">Name</td>
+          <th class="tableelement">Bug</td>
+          <th class="tableelement">Version Number</td>
+        </tr>
+        <tr>
+          <td class="tableelement" width="25%"><input type="text" id="name" placeholder="Name"></td>
+          <td class="tableelement" width="50%"><textarea id="bugText" rows="4" cols="50" placeholder="Feedback" style="resize: none;"></textarea></td>
+          <td class="tableelement" width="25%"><input type="text" id="version" placeholder="Version Number"></td>
+          <td class="tableelement" width="25%"><button onclick="enterText()">Post</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="divider">
+    <p>Divider</p>
+  </div>
+  
+  <div class="column1">
+    <table class="tabledesign" id="feedbackLogs" style="width:99%">
+      <tr>
+        <th class="tableelement">Name</td>
+        <th class="tableelement">Feedback</td>
+        <th class="tableelement">Version Number</td>
+      </tr>
+    </table>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+  const supabaseUrl = 'https://nvphfgdzlfewpzgvdyex.supabase.co'
+  const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGhmZ2R6bGZld3B6Z3ZkeWV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2NTk3NzksImV4cCI6MjAwODIzNTc3OX0.zf-2chGWKia_suIcDbvSZm5IAk_sGUUE8fKSHl9vZ4I'
+  const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+</script>
+<script src="./index.js"></script>
+
+</body>
+
+</html>
