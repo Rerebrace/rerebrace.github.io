@@ -44,7 +44,7 @@ async function retrieveFeedbackLogs() {
             }
         }
     }
-    feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><th class="tableelement">Name</td><th class="tableelement">Feedback</td></tr>');
+    feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><th class="tableelement" width="25%">Name</td><th class="tableelement" width="75%">Feedback</td></tr>');
 }
 
 retrieveFeedbackLogs();
