@@ -1,6 +1,6 @@
-let bugsLogsHolder = document.getElementById("feedbackLogs");
+let bugsLogsHolder = document.getElementById("bugLogs");
 let bugName = document.getElementById("name");
-let bugText = document.getElementById("bugs");
+let bugText = document.getElementById("bugText");
 let bugVersion = document.getElementById("version");
 let tableName = "Bugs";
 let nameVar = "";
@@ -21,34 +21,36 @@ async function enterText() {
 
 
 
-async function retrieveFeedbackLogs() {
+async function retrieveBugsLogs() {
     
     const { data, error } = await _supabase.from(tableName).select();
     const { count, error1 } = await _supabase.from(tableName).select('*', { count: 'exact', head: true });
     let currentNumber = 1;
     
-    feedbackLogsHolder.innerHTML = "";
+    bugsLogsHolder.innerHTML = "";
     console.log(data);
     for(let i = 0; i < count; i++) {
         for(let j = 0; j < count; j++) {
             if(data[j]["id"] == currentNumber) {
                 nameVar = data[j]["name"];
                 textVar = data[j]["contents"];
-
-                feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement" width="25%"></td><td class="secondelement tableelement" width="75%"></td></tr>');
+                versionVar = data[j]["version"];
+                bugsLogsHolder.insertAdjacentHTML("afterbegin", '<tr><td class="firstelement tableelement" width="25%"></td><td class="secondelement tableelement" width="50%"></td><td class="thirdelement tableelement" width="50%"></td></tr>');
                 let namePlace = document.getElementsByClassName("firstelement");
                 namePlace[namePlace.length-i-1].insertAdjacentText("beforeend", nameVar);
                 let textPlace = document.getElementsByClassName("secondelement");
                 textPlace[textPlace.length-i-1].insertAdjacentText("beforeend", textVar);
+                let versionPlace = document.getElementsByClassName("thirdelement");
+                versionPlace[versionPlace.length-i-1].insertAdjacentText("beforeend", versionVar);
                 console.log(contents);
                 currentNumber+=1;
                 break;
             }
         }
     }
-    feedbackLogsHolder.insertAdjacentHTML("afterbegin", '<tr><th class="tableelement" width="25%">Name</td><th class="tableelement" width="75%">Feedback</td></tr>');
+    bugsLogsHolder.insertAdjacentHTML("afterbegin", '<tr><th class="tableelement" width="25%">Name</td><th class="tableelement" width="50%">Feedback</td><th class="tableelement" width="25%">Version</td></tr>');
 }
 
 retrieveBugsLogs();
 
-const intervalID = setInterval(retrieveFeedbackLogs, 1000);
+const intervalID = setInterval(retrieveBugsLogs, 1000);
