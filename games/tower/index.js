@@ -61,7 +61,7 @@ async function updateDownloads(whichdoc) {
 }
 
 async function firstload() {
-    twozero.innerHTML = 'Version 2.0 - 0 Downloads';
+    twozero.innerHTML += 'Version 2.0 - 0 Downloads';
     onetwo.innerHTML += `Version 1.2 - 0 Downloads`;
     oneone.innerHTML += `Version 1.1 - 0 Downloads`;
     onethree.innerHTML += `Version 1.3 - 0 Downloads`;
