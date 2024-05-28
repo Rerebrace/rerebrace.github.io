@@ -21,7 +21,6 @@ async function updateDownloads(whichdoc) {
             }
             localStorage.setItem("downlaoded", "true");
         }
-        }
     }
 }
 
