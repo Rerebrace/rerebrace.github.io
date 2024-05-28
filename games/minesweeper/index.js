@@ -11,7 +11,7 @@ async function updateDownloads(whichdoc) {
 
         let thisvar = document.getElementById(whichdoc);
         if (whichdoc == "10downloads") {
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 1; i++) {
                 if (data[i]['id'] === idone) {
                     console.log(data[i])
                     let newhere = data[i][rowname] + 1
@@ -29,7 +29,7 @@ async function firstload() {
     onezero.innerHTML += `Version 1.0 - 0 Downloads`;
 
     const { data, error } = await _supabase.from(tablename).select('')
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 1; i++) {
         if (data[i]['id'] === idone) {
             console.log(data[i])
             let newhere = data[i][rowname]
