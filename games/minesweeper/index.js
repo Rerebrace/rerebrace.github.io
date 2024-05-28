@@ -26,14 +26,14 @@ async function updateDownloads(whichdoc) {
 }
 
 async function firstload() {
-    oneone.innerHTML += `Version 1.0 - 0 Downloads`;
+    onezero.innerHTML += `Version 1.0 - 0 Downloads`;
 
     const { data, error } = await _supabase.from(tablename).select('')
     for (let i = 0; i < 4; i++) {
         if (data[i]['id'] === idone) {
             console.log(data[i])
             let newhere = data[i][rowname]
-            oneone.innerHTML = `Version 1.0 - ${newhere} Downloads`;
+            onezero.innerHTML = `Version 1.0 - ${newhere} Downloads`;
         }
 
     }
