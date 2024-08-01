@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Minecraft 2D</title>
+  <link rel="stylesheet" type="text/css" href="../../standard.css">
+
+</head>
+
+<body>
+
+  <header class="headerrow">
+    <h1>The Rerebrace Website</h1>
+  </header>
+
+  <ul class="navigationlist">
+    <li class="navigationelement"><a class="navigationlink" href="../../">Home</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../games/">Games</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../help/">Help</a></li>
+    <li class="navigationelement"><a class="navigationlink" href="../../about/">About</a></li>
+  </ul>
+
+  <div class="divider">
+    <p>Divider</p>
+  </div>
+
+  <div class="column1">
+    <div class="grouping">
+      <h2 class="plaintext">Minecraft 2D</h2>
+    </div>
+    <div class="grouping">
+      <p class="plaintext">Welcome to the download page of the game Minecraft 2D.</p>
+    </div>
+    <div class="grouping">
+      <p class="plaintext">Here are the current versions, along with their download links. </p>
+      <table class="tabledesign" style="width:100%">
+        <tr>
+          <th class="tableelement">Version Number</td>
+          <th class="tableelement">Windows Download</td>
+        </tr>
+        <tr>
+          <td id="001downloads" class="tableelement"></td>
+          <td class="tableelement"><a onclick="updateDownloads('001downloads');"
+              href="../../files/games/minecraft 2d/minecraft 2d 0.01.zip" download="Minecraft 2D(Version 0.01).zip">Download</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script>
+    const supabaseUrl = 'https://nvphfgdzlfewpzgvdyex.supabase.co'
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im52cGhmZ2R6bGZld3B6Z3ZkeWV4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTI2NTk3NzksImV4cCI6MjAwODIzNTc3OX0.zf-2chGWKia_suIcDbvSZm5IAk_sGUUE8fKSHl9vZ4I'
+    const _supabase = supabase.createClient(supabaseUrl, supabaseKey)
+  </script>
+  
+  <script src="./index.js"></script>
+
+</body>
+
+</html>
