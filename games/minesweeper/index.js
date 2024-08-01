@@ -27,7 +27,7 @@ async function updateDownloads(whichdoc) {
 async function firstload() {
     onezero.innerHTML += `Version 1.0 - 0 Downloads`;
 
-    const { data, error } = await _supabase.from(tablename).select('')
+    const { data, error } = await _supabase.from(tablename).select('*')
     for (let i = 0; i < 1; i++) {
         console.log(i)
         console.log(data[i])
