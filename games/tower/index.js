@@ -71,6 +71,7 @@ async function firstload() {
     onethree.innerHTML += `Version 1.3 - 0 Downloads`;
 
     const { data, error } = await _supabase.from(tablename).select('')
+    console.log(data)
     for (let i = 0; i < 4; i++) {
         if (data[i]['id'] === idone) {
             console.log(data[i])
