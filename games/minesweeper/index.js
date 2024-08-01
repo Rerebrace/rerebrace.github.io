@@ -29,6 +29,9 @@ async function firstload() {
 
     const { data, error } = await _supabase.from(tablename).select('')
     for (let i = 0; i < 1; i++) {
+        console.log(i)
+        console.log(data[i])
+        console.log(data[i]['id'])
         if (data[i]['id'] === idone) {
             console.log(data[i])
             let newhere = data[i][rowname]
